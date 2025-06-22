@@ -1,6 +1,8 @@
 from random import sample
 from sys import argv, exit
 
+count = 10
+
 def main():
     if len(argv) < 2:
         print('Usage: python test_random_gen.py <filename>')
@@ -8,12 +10,12 @@ def main():
     
     filename = argv[1]
     
-    testdata = [str(_) for _ in sample(range(1, 101), 10)]
+    testdata = [str(_) for _ in sample(range(1, 101), count)]
     line = ' '.join(testdata)
 
-    with open(filename, 'w') as f:
+    with open(f'{filename}.txt', 'w') as f:
         f.write(line)
-    print(f'written shxt to {filename} successfully uwu')
+    print(f'written shxt to {filename}.txt successfully uwu')
 
 if __name__ == "__main__":
     main()
