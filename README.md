@@ -5,7 +5,7 @@ for 2025 CSIE camp
 python test_random_gen.py <filename>
 ```
 ## How to run the game?
-Before running, make sure your testdata exists!
+Before running, make sure your testdata exists! (By default, it exists!)
 ```
 python main.py <mode>
 ```
