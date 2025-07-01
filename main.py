@@ -1,7 +1,14 @@
 import pygame
-from sys import exit, argv
+from sys import exit, argv, platform
 from random import randint
 from math import gcd
+
+if platform == "win32":
+    import ctypes
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+    except Exception:
+        pass
 
 # Slime class
 class Slime(pygame.sprite.Sprite):
