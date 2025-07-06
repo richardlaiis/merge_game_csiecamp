@@ -193,8 +193,14 @@ if game_lost:
 else:
     end_text = end_font.render(f'Final Cost: {total_cost}', True, 'white')
 
-screen.blit(end_text, end_text.get_rect(center=(900, 700)))
-pygame.display.update()
-pygame.time.delay(3000)
-pygame.quit()
-exit()
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+            exit()
+    screen.blit(end_text, end_text.get_rect(center=(900, 700)))
+    pygame.display.update()
+    clock.tick(60)
+# pygame.time.delay(3000)
+# pygame.quit()
+# exit()
