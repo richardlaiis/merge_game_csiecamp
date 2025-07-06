@@ -47,10 +47,10 @@ if len(argv) != 2:
 
 try:
     mode = int(argv[1])
-    if not (1 <= mode <= 5):
+    if not (0 <= mode <= 5):
         raise ValueError
 except ValueError:
-    print("Mode must be an integer between 1 and 5.")
+    print("Mode must be an integer between 0 and 5.")
     exit(1)
 
 # Read input
@@ -65,6 +65,8 @@ except Exception as e:
 
 # Cost function
 def compute_cost(hp1, hp2, mode):
+    if mode == 0:
+        return 10
     if mode == 1:
         return hp1 * hp2
     elif mode == 2:
