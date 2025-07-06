@@ -84,7 +84,7 @@ clock = pygame.time.Clock()
 
 # Timer setup
 start_ticks = pygame.time.get_ticks()  # Milliseconds
-time_limit = 120  # Seconds
+time_limit = 150  # Seconds
 game_lost = False
 
 # Load background
