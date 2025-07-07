@@ -81,12 +81,15 @@ def compute_cost(hp1, hp2, mode):
 # Initialize Pygame
 pygame.init()
 screen = pygame.display.set_mode((1800, 1400))
-pygame.display.set_caption('Merging Game')
+pygame.display.set_caption('Merging Game of CSIE CAMP 2025')
 clock = pygame.time.Clock()
 
 # Timer setup
 start_ticks = pygame.time.get_ticks()  # Milliseconds
-time_limit = 150  # Seconds
+
+limits = [150, 150, 150, 150, 300, 300]
+time_limit = limits[mode]  # Seconds
+
 game_lost = False
 
 # Load background
